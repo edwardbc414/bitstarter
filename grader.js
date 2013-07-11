@@ -91,11 +91,12 @@ if(require.main == module) {
     if (typeof program.url == 'undefined'){
 	var checkJson = checkHtmlFile(program.file, program.checks);
 	var outJson = JSON.stringify(checkJson, null, 4);
+	console.log(outJson);
+
     } else {
 	getUrl(program.url, program.checks);
     }
 
-    console.log(outJson);
 } else {
     exports.checkHtmlFile = checkHtmlFile;
 }
